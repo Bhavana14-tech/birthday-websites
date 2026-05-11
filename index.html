@@ -1,325 +1,329 @@
-<!DOCTYPE html>\
-<html lang="en">\
-<head>\
-<meta charset="UTF-8">\
-<meta name="viewport" content="width=device-width, initial-scale=1.0">\
-<title>Birthday Memories</title>\
-\
-<style>\
-*\{\
-margin:0;\
-padding:0;\
-box-sizing:border-box;\
-\}\
-\
-body\{\
-font-family:Arial, sans-serif;\
-background:linear-gradient(to bottom,#ffe4ec,#fff);\
-overflow-x:hidden;\
-color:#333;\
-\}\
-\
-section\{\
-padding:80px 20px;\
-text-align:center;\
-\}\
-\
-h1\{\
-font-size:clamp(2.5rem,8vw,5rem);\
-color:#ff3366;\
-margin-bottom:20px;\
-line-height:1.2;\
-\}\
-\
-h2\{\
-font-size:2.5rem;\
-color:#ff3366;\
-margin-bottom:30px;\
-\}\
-\
-p\{\
-font-size:1.2rem;\
-line-height:1.8;\
-\}\
-\
-.hero\{\
-min-height:100vh;\
-display:flex;\
-flex-direction:column;\
-justify-content:center;\
-align-items:center;\
-position:relative;\
-padding:40px 20px;\
-\}\
-\
-.hero video\{\
-width:100%;\
-max-width:600px;\
-border-radius:30px;\
-margin-top:30px;\
-box-shadow:0 10px 30px rgba(0,0,0,0.2);\
-\}\
-\
-.gallery\{\
-display:grid;\
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));\
-gap:25px;\
-max-width:1100px;\
-margin:auto;\
-\}\
-\
-.card\{\
-background:white;\
-padding:15px;\
-border-radius:30px;\
-box-shadow:0 10px 30px rgba(0,0,0,0.1);\
-transition:0.3s;\
-\}\
-\
-.card:hover\{\
-transform:scale(1.03);\
-\}\
-\
-.card img,\
-.gallery img\{\
-width:100%;\
-border-radius:20px;\
-\}\
-\
-.love-letter\{\
-max-width:800px;\
-margin:auto;\
-background:white;\
-padding:40px;\
-border-radius:40px;\
-box-shadow:0 10px 30px rgba(0,0,0,0.1);\
-\}\
-\
-.music-btn\{\
-position:fixed;\
-bottom:20px;\
-right:20px;\
-background:#ff3366;\
-color:white;\
-border:none;\
-width:70px;\
-height:70px;\
-border-radius:50%;\
-font-size:30px;\
-cursor:pointer;\
-box-shadow:0 10px 20px rgba(0,0,0,0.2);\
-z-index:999;\
-\}\
-\
-.hearts\{\
-position:fixed;\
-inset:0;\
-pointer-events:none;\
-overflow:hidden;\
-z-index:1;\
-\}\
-\
-.heart\{\
-position:absolute;\
-top:-50px;\
-font-size:2rem;\
-animation:fall linear forwards;\
-\}\
-\
-@keyframes fall\{\
-to\{\
-transform:translateY(110vh);\
-opacity:0;\
-\}\
-\}\
-\
-footer\{\
-padding:40px;\
-text-align:center;\
-background:white;\
-color:#666;\
-\}\
-</style>\
-</head>\
-\
-<body>\
-\
-<div class="hearts" id="hearts"></div>\
-\
-<audio id="music" loop>\
-<source src="music.mp3" type="audio/mp3">\
-</audio>\
-\
-<button class="music-btn" onclick="toggleMusic()">\uc0\u55356 \u57269 </button>\
-\
-<section class="hero">\
-\
-<div style="font-size:70px;">\uc0\u55356 \u57218 </div>\
-\
-<h1>\
-Many More Happy Returns<br>\
-Of The Day Bava \uc0\u10084 \u65039 \
-</h1>\
-\
-<p>\
-Every moment with you becomes a beautiful memory \uc0\u10024 \
-</p>\
-\
-<h2 style="margin-top:30px;">\
-Love you Sukumar \uc0\u10084 \u65039 \
-</h2>\
-\
-<video autoplay muted loop playsinline>\
-<source src="hero-video.mp4" type="video/mp4">\
-</video>\
-\
-<div class="gallery" style="margin-top:50px; max-width:700px;">\
-<div class="card">\
-<img src="cake-couple.jpg">\
-</div>\
-\
-<div class="card">\
-<img src="bday-love2.png">\
-</div>\
-</div>\
-\
-</section>\
-\
-<section>\
-\
-<h2>Beautiful Memories \uc0\u10084 \u65039 </h2>\
-\
-<div class="gallery">\
-\
-<div class="card">\
-<img src="photo1.jpg">\
-<p>My handsome birthday boy \uc0\u10024 </p>\
-</div>\
-\
-<div class="card">\
-<img src="photo2.jpg">\
-<p>Always smiling, always mine \uc0\u10084 \u65039 </p>\
-</div>\
-\
-<div class="card">\
-<img src="holding-hand.png">\
-<p>Forever holding your hand \uc0\u55357 \u56469 </p>\
-</div>\
-\
-</div>\
-\
-</section>\
-\
-<section>\
-\
-<div class="love-letter">\
-\
-<h2>\uc0\u55357 \u56460  A Letter For You</h2>\
-\
-<p>\
-Happy Birthday Bava \uc0\u10084 \u65039 \
-<br><br>\
-\
-Thank you for coming into my life and making every day feel more special.\
-Your smile, your care, and your love mean everything to me.\
-I wish this year brings you happiness, success, peace, and all the love you deserve.\
-\
-<br><br>\
-\
-No matter where life takes us, you will always be my lovely bava \uc0\u55357 \u56459 \
-</p>\
-\
-<h3 style="margin-top:30px;color:#ff3366;">\
-\'97 Your cutie Girl \uc0\u55357 \u56841 \u10084 \u65039 \
-</h3>\
-\
-</div>\
-\
-</section>\
-\
-<section>\
-\
-<h2>My Love \uc0\u10084 \u65039 </h2>\
-\
-<div class="gallery" style="max-width:800px;">\
-\
-<div class="card">\
-<img src="valentine.jpg">\
-</div>\
-\
-<div class="card">\
-<img src="hands.jpg">\
-</div>\
-\
-</div>\
-\
-</section>\
-\
-<section>\
-\
-<div style="font-size:60px;">\uc0\u55356 \u57217 </div>\
-\
-<h2>Your Birthday Surprise \uc0\u55356 \u57217 </h2>\
-\
-<div style="max-width:900px;margin:auto;">\
-\
-<video controls autoplay style="width:100%;border-radius:30px;">\
-<source src="birthday-video.mp4" type="video/mp4">\
-</video>\
-\
-</div>\
-\
-<h2 style="margin-top:30px;">\
-Forever yours \uc0\u10084 \u65039 \
-</h2>\
-\
-</section>\
-\
-<footer>\
-\uc0\u10084 \u65039  Made with lots of love by Your lovely Girl \u55357 \u56841 \u10084 \u65039 \
-</footer>\
-\
-<script>\
-\
-const hearts = document.getElementById("hearts");\
-\
-for(let i=0;i<25;i++)\{\
-\
-const heart=document.createElement("div");\
-\
-heart.classList.add("heart");\
-\
-heart.innerHTML=["\uc0\u10084 \u65039 ","\u55357 \u56469 ","\u55357 \u56470 ","\u55356 \u57144 "][Math.floor(Math.random()*4)];\
-\
-heart.style.left=Math.random()*100+"%";\
-\
-heart.style.animationDuration=(3+Math.random()*5)+"s";\
-\
-heart.style.fontSize=(20+Math.random()*30)+"px";\
-\
-hearts.appendChild(heart);\
-\}\
-\
-setTimeout(()=>\{\
-hearts.style.display="none";\
-\},6000);\
-\
-const music=document.getElementById("music");\
-\
-function toggleMusic()\{\
-\
-if(music.paused)\{\
-music.play();\
-\}else\{\
-music.pause();\
-\}\
-\}\
-\
-document.body.addEventListener("click",()=>\{\
-music.play().catch(()=>\{\});\
-\},\{once:true\});\
-\
-</script>\
-\
-</body>\
-</html>}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Memories</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:linear-gradient(to bottom,#ffe4ec,#fff);
+overflow-x:hidden;
+color:#333;
+}
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+h1{
+font-size:clamp(2.5rem,8vw,5rem);
+color:#ff3366;
+margin-bottom:20px;
+line-height:1.2;
+}
+
+h2{
+font-size:2.5rem;
+color:#ff3366;
+margin-bottom:30px;
+}
+
+p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position:relative;
+padding:40px 20px;
+}
+
+.hero video{
+width:100%;
+max-width:600px;
+border-radius:30px;
+margin-top:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+.card img,
+.gallery img{
+width:100%;
+border-radius:20px;
+}
+
+.love-letter{
+max-width:800px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:40px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.music-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff3366;
+color:white;
+border:none;
+width:70px;
+height:70px;
+border-radius:50%;
+font-size:30px;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+z-index:999;
+}
+
+.hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.heart{
+position:absolute;
+top:-50px;
+font-size:2rem;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:white;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<section class="hero">
+
+<div style="font-size:70px;">🎂</div>
+
+<h1>
+Many More Happy Returns<br>
+Of The Day Bava ❤️
+</h1>
+
+<p>
+Every moment with you becomes a beautiful memory ✨
+</p>
+
+<h2 style="margin-top:30px;">
+Love you Sukumar ❤️
+</h2>
+
+<video autoplay muted loop playsinline>
+<source src="hero-video.mp4" type="video/mp4">
+</video>
+
+<div class="gallery" style="margin-top:50px; max-width:700px;">
+
+<div class="card">
+<img src="cake-couple.jpg">
+</div>
+
+<div class="card">
+<img src="bday-love2.png">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Beautiful Memories ❤️</h2>
+
+<div class="gallery">
+
+<div class="card">
+<img src="photo1.jpg">
+<p>My handsome birthday boy ✨</p>
+</div>
+
+<div class="card">
+<img src="photo2.jpg">
+<p>Always smiling, always mine ❤️</p>
+</div>
+
+<div class="card">
+<img src="holding-hand.png">
+<p>Forever holding your hand 💕</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="love-letter">
+
+<h2>💌 A Letter For You</h2>
+
+<p>
+Happy Birthday Bava ❤️
+<br><br>
+
+Thank you for coming into my life and making every day feel more special.<br>
+Your smile, your care, and your love mean everything to me.<br>
+I wish this year brings you happiness, success, peace, and all the love you deserve.
+
+<br><br>
+
+No matter where life takes us, you will always be my lovely bava 💋
+</p>
+
+<h3 style="margin-top:30px;color:#ff3366;">
+— Your cutie Girl 😉❤️
+</h3>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>My Love ❤️</h2>
+
+<div class="gallery" style="max-width:800px;">
+
+<div class="card">
+<img src="valentine.jpg">
+</div>
+
+<div class="card">
+<img src="hands.jpg">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div style="font-size:60px;">🎁</div>
+
+<h2>Your Birthday Surprise 🎁</h2>
+
+<div style="max-width:900px;margin:auto;">
+
+<video controls autoplay style="width:100%;border-radius:30px;">
+<source src="birthday-video.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<h2 style="margin-top:30px;">
+Forever yours ❤️
+</h2>
+
+</section>
+
+<footer>
+❤️ Made with lots of love by Your lovely Girl 😉❤️
+</footer>
+
+<script>
+
+const hearts = document.getElementById("hearts");
+
+for(let i=0;i<25;i++){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML=["❤️","💕","💖","🌸"][Math.floor(Math.random()*4)];
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+hearts.appendChild(heart);
+
+}
+
+setTimeout(()=>{
+hearts.style.display="none";
+},6000);
+
+const music=document.getElementById("music");
+
+function toggleMusic(){
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+document.body.addEventListener("click",()=>{
+music.play().catch(()=>{});
+},{once:true});
+
+</script>
+
+</body>
+</html>
